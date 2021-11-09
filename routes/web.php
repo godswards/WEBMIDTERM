@@ -27,3 +27,5 @@ Route::get('/home', [
 
 
 Route::resource('rotcmembers', App\Http\Controllers\RotcmemberController::class);
+
+Route::resource('logs', App\Http\Controllers\LogsController::class);
