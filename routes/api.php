@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\UserController;
+use App\Http\Controllers\API\RotcmemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +23,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('login', [UsersController::class, 'login']);
 Route::post('register', [UsersController::class, 'register']);
 Route::post('reset-password',[UsersController::class,'resetPassword']);
+
+//POSTS
+
+route::get('get-all-rotcmember',[RotcmemberController::class,'getallRotcmember']);
+route::get('get-rotcmember',[RotcmemberController::class,'getRotcmember']);
+route::get('search-rotcmember',[RotcmemberController::class,'searchRotcmember']);
